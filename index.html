@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Teste</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="brand"><span>Teste</span>testestest</h1>
+    <div class="wrapper">
+      <div class="company-info">
+        <h3>teste</h3>
+        <ul>
+          <li><i class="fa fa-road"></i>rua teste</li>
+          <li><i class="fa fa-phone"></i> (555) 555-5555</li>
+          <li><i class="fa fa-envelope"></i> teste@teste.com</li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h3>Contato</h3>
+        <div class="alert">Your message has been sent</div>
+        <form id="contactForm">
+          <p>
+            <label>Nome</label>
+            <input type="text" name="name" id="name" required>
+          </p>
+          <p>
+            <label>Empresa</label>
+            <input type="text" name="company" id="company">
+          </p>
+          <p>
+            <label>Email</label>
+            <input type="email" name="email" id="email" required>
+          </p>
+          <p>
+            <label>Celular</label>
+            <input type="text" name="phone" id="phone">
+          </p>
+          <p class="full">
+            <label>Mensagem</label>
+            <textarea name="message" rows="5" id="message"></textarea>
+          </p>
+          <p class="full">
+            <button type="submit">Enviar</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
