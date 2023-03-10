@@ -1,53 +1,51 @@
-// Initialize Firebase (ADD YOUR OWN DATA)
+// Inicializa o Firebase (Adicionar a configuração do Firebase do seu aplicativo da web)
 var config = {
-  apiKey: "AIzaSyAwmIwpV_wVoP0sjbBS_GBPPV2TEz_zNCI",
-  authDomain: "form-bookworm.firebaseapp.com",
-  databaseURL: "https://form-bookworm-default-rtdb.firebaseio.com",
-  projectId: "form-bookworm",
-  storageBucket: "form-bookworm.appspot.com",
-  messagingSenderId: "997838281378",
-  appId: "1:997838281378:web:484c4be9703ac5457b15fb"
+  apiKey: "AIzaSyA_12wo6w5i3Mmyo0ZYmbIEh5Nv7Uul_uI",
+  authDomain: "fir-teste-e3ded.firebaseapp.com",
+  databaseURL: "https://fir-teste-e3ded-default-rtdb.firebaseio.com",
+  projectId: "fir-teste-e3ded",
+  storageBucket: "fir-teste-e3ded.appspot.com",
+  messagingSenderId: "1083232919944",
+  appId: "1:1083232919944:web:feb73dab38169dfea61a3d"
 };
 firebase.initializeApp(config);
 
-// Reference messages collection
 var messagesRef = firebase.database().ref('messages');
 
-// Listen for form submit
+// envio do formulário
 document.getElementById('contactForm').addEventListener('submit', submitForm);
 
-// Submit form
 function submitForm(e){
   e.preventDefault();
 
-  // Get values
+  // valores
   var name = getInputVal('name');
   var company = getInputVal('company');
   var email = getInputVal('email');
   var phone = getInputVal('phone');
   var message = getInputVal('message');
 
-  // Save message
+  // salva a mensagem
   saveMessage(name, company, email, phone, message);
 
-  // Show alert
+  // mostra o alerta 
   document.querySelector('.alert').style.display = 'block';
 
-  // Hide alert after 3 seconds
+  // esconde o alerta após 3 segundos
   setTimeout(function(){
     document.querySelector('.alert').style.display = 'none';
   },3000);
 
-  // Clear form
+  // limpa o formulário
   document.getElementById('contactForm').reset();
 }
 
-// Function to get get form values
+// obtem valores do formulário
 function getInputVal(id){
   return document.getElementById(id).value;
 }
 
-// Save message to firebase
+// Salva a mensagem no firebase
 function saveMessage(name, company, email, phone, message){
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
