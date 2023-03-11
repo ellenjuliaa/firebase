@@ -1,12 +1,12 @@
 // Inicializa o Firebase (Adicionar a configuração do Firebase do seu aplicativo da web)
 var config = {
-  apiKey: "AIzaSyA_12wo6w5i3Mmyo0ZYmbIEh5Nv7Uul_uI",
-  authDomain: "fir-teste-e3ded.firebaseapp.com",
-  databaseURL: "https://fir-teste-e3ded-default-rtdb.firebaseio.com",
-  projectId: "fir-teste-e3ded",
-  storageBucket: "fir-teste-e3ded.appspot.com",
-  messagingSenderId: "1083232919944",
-  appId: "1:1083232919944:web:feb73dab38169dfea61a3d"
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
 };
 firebase.initializeApp(config);
 
